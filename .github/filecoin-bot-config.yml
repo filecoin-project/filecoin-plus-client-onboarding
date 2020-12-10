@@ -1,0 +1,8 @@
+# If enabled, auto-assigns users when a new issue is created. Defaults to true
+addAssignees: true
+
+# If enabled, the list of users to assign to new issues. 
+# If empty or not provided, the repository owner is assigned
+assignees: 
+  - aaitor
+#  - user2

@@ -1,0 +1,19 @@
+###
+### Special magic GitHub labels
+### https://help.github.com/en/github/building-a-strong-community/encouraging-helpful-contributions-to-your-project-with-labels
+#
+
+
+# On-boarding request state
+- name: "state:Request"
+  color: 0080ff
+- name: "state:Further info needed"
+  color: ffbf00
+- name: "state:Granted"
+  color: 40ff00
+- name: "state:Denied"
+  color: ff0000
+- name: "bot:lookingGood"
+  color: i006b75
+- name: "bot:reviewNeeded"
+  color: fbca04

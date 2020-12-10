@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Filecon Dev Team
+    url: https://filecoin.io/
+    about: Please ask and answer questions here.
+  - name: Filecoin Verifiers Team
+    url: https://bounty.github.com/
+    about: Please report issues related with request datacap
+
