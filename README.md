@@ -14,34 +14,6 @@ Filecoin Plus is a pragmatic solution to the technically challenging problem of 
 - Terms of Service
 - A Useful Storage Network
 
-## Terminology
-### DataCap
-DataCap, when allocated to a client, can be spent by the client in storage deals with miners. These deals carry a higher deal quality multiplier, which increases the “quality adjusted power” of the storage miner on the network (yielding better block rewards for the miner over time). In short, miners are heavily incentivized to take deals from Clients who use DataCap to pay for their deals. 
-
-DataCap is granted in batches to Notaries, who in turn, allocate it to responsible clients that spend the DataCap to fund storage deals. DataCap is consumed as it is used to make deals. 
-
-### Notary
-Notaries are selected to serve as fiduciaries for the Filecoin Network, and are responsible for allocating DataCap to clients with legitimate storage use cases. The base responsibilities of notaries include: 
-- Allocate DataCap to clients in order to subsidize reliable and useful storage on the network.
-- Verify that clients receive a DataCap commensurate with the level of trust that is warranted based on information provided.
-- Ensure that in the allocation of the DataCap no party is given excessive trust in any form that might jeopardize the network.
-- Follow operational guidelines, keep record of decision flow, and respond to any requests for audits of their allocation decisions.
-
-You can find a list of the active Notaries [here](https://filecoinplus.on.fleek.co) who can allocate DataCap. 
-
-Notaries are selected through an application process described [here](https://github.com/filecoin-project/notary-governance/tree/main/notaries#application--selection-process). If approved, [Root Key Holders](https://github.com/filecoin-project/notary-governance/tree/main/root-key-holders#overview) (executors of the decisions made by the community on-chain) grant Notary status and associated DataCap amounts. Those interested in becoming Notaries should apply to this role by filing an Issue in the [Notary Governance Repo](https://github.com/filecoin-project/notary-governance/).
-
-Notaries are given autonomy in their decision making process and encouraged to allocate DataCap based on their best judgement. However, Notaries should expect to answer any potential questions about previous allocation decisions before receiving future DataCap to distribute. 
-
-Additionally, to prevent conflicts of interest, Notaries should not allocate DataCap to clients over which they control the private keys. In the event this is an issue, the Notary should contact another Notary (in the same geography or aligned to the same use case) to handle the allocation for that specific client.
-
-_See additional information [here](https://github.com/filecoin-project/notary-governance/tree/main/notaries#overview)._
-
-### Client
-Clients are active participants of the network with DataCap allocation for their use cases. Clients can use their DataCap to incentivize miners to provide additional features and levels of services that meet their specific requirements. In doing so, storage related goods and services on Filecoin are made more valuable and competitive over time. Clients are vetted by Notaries to ensure the client receives DataCap commensurate with their reputation and needs, and that the Client responsibly allocates that DataCap. Obtain verification and DataCap allocation from a Notary. Deploy DataCap responsibly in accordance with the Principles. Follow operational guidelines, keep record of decision flow, and respond to any requests for audits of their allocation decisions.
-
-Specific details on the suggested framework for responsible DataCap allocation are described in the [repository](https://github.com/filecoin-project/notary-governance). It is expected that clients who intend to receive greater amounts of DataCap may be asked to provide evidence for responsible spending of their previous allocation before receiving more.
-
 ## Using DataCap
 ### How to Get DataCap
 Clients can get DataCap by making a request to a Notary - you can find a list of active Notaries on the [Filecoin Plus Registry](https://filecoinplus.on.fleek.co). Notaries may specialize in the types of requests they’ll choose to support - some may hand out small amounts of DataCap freely, while others may support larger requests (but also require more due diligence).
@@ -92,6 +64,15 @@ If making deals from the command line, make sure to pass the flag `--verified-de
  lotus client deal --verified-deal=true
 ```
 
+### Checking Remaining DataCap 
+Once you have received DataCap to an address, you can check the remaining balance either by visiting a site that enables this (e.g. [verify.glif.io](https://verify.glif.io/)) or by querying your address on a node. 
+
+_Note: Lotus-shed is a separate package you will need to install, though these features are slated to be merged into Lotus._
+
+```
+lotus-shed verifreg check-client  f00000
+```
+
 ### Finding Miners to Take FIL+ Deals
 There are a few difference ways in which a client can find a miner to take a FIL+ storage deal:
 - This [issue](https://github.com/filecoin-project/notary-governance/issues/8) has a list of miners involved in the discussion below that advertise details about their services
@@ -105,6 +86,35 @@ As a client who has received DataCap for making storage deals on Filecoin, this 
 - Distribute your storage deals across different miners so your data is more likely to be accessible long term
 - Ask for features (like fast retrieval) that would make your experience better - clients a lot of leverage in this ecosystem
 - Stay in compliance with miners’ stated Terms of Service and Content Policy
+
+## Terminology
+### DataCap
+DataCap, when allocated to a client, can be spent by the client in storage deals with miners. These deals carry a higher deal quality multiplier, which increases the “quality adjusted power” of the storage miner on the network (yielding better block rewards for the miner over time). In short, miners are heavily incentivized to take deals from Clients who use DataCap to pay for their deals. 
+
+DataCap is granted in batches to Notaries, who in turn, allocate it to responsible clients that spend the DataCap to fund storage deals. DataCap is consumed as it is used to make deals. 
+
+### Notary
+Notaries are selected to serve as fiduciaries for the Filecoin Network, and are responsible for allocating DataCap to clients with legitimate storage use cases. The base responsibilities of notaries include: 
+- Allocate DataCap to clients in order to subsidize reliable and useful storage on the network.
+- Verify that clients receive a DataCap commensurate with the level of trust that is warranted based on information provided.
+- Ensure that in the allocation of the DataCap no party is given excessive trust in any form that might jeopardize the network.
+- Follow operational guidelines, keep record of decision flow, and respond to any requests for audits of their allocation decisions.
+
+You can find a list of the active Notaries [here](https://filecoinplus.on.fleek.co) who can allocate DataCap. 
+
+Notaries are selected through an application process described [here](https://github.com/filecoin-project/notary-governance/tree/main/notaries#application--selection-process). If approved, [Root Key Holders](https://github.com/filecoin-project/notary-governance/tree/main/root-key-holders#overview) (executors of the decisions made by the community on-chain) grant Notary status and associated DataCap amounts. Those interested in becoming Notaries should apply to this role by filing an Issue in the [Notary Governance Repo](https://github.com/filecoin-project/notary-governance/).
+
+Notaries are given autonomy in their decision making process and encouraged to allocate DataCap based on their best judgement. However, Notaries should expect to answer any potential questions about previous allocation decisions before receiving future DataCap to distribute. 
+
+Additionally, to prevent conflicts of interest, Notaries should not allocate DataCap to clients over which they control the private keys. In the event this is an issue, the Notary should contact another Notary (in the same geography or aligned to the same use case) to handle the allocation for that specific client.
+
+_See additional information [here](https://github.com/filecoin-project/notary-governance/tree/main/notaries#overview)._
+
+### Client
+Clients are active participants of the network with DataCap allocation for their use cases. Clients can use their DataCap to incentivize miners to provide additional features and levels of services that meet their specific requirements. In doing so, storage related goods and services on Filecoin are made more valuable and competitive over time. Clients are vetted by Notaries to ensure the client receives DataCap commensurate with their reputation and needs, and that the Client responsibly allocates that DataCap. Obtain verification and DataCap allocation from a Notary. Deploy DataCap responsibly in accordance with the Principles. Follow operational guidelines, keep record of decision flow, and respond to any requests for audits of their allocation decisions.
+
+Specific details on the suggested framework for responsible DataCap allocation are described in the [repository](https://github.com/filecoin-project/notary-governance). It is expected that clients who intend to receive greater amounts of DataCap may be asked to provide evidence for responsible spending of their previous allocation before receiving more.
+
 
 ## Resources
 FIP introducing Filecoin Plus:
