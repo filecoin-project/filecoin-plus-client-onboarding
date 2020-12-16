@@ -1,62 +1,20 @@
-# Filecoin Plus
 ## Introduction
-Filecoin Plus aims to maximize the amount of useful storage that Filecoin can and will support. Filecoin Plus puts power in the hands of clients and incentivizes participants to bring demand into the network. Client needs and legitimate use cases will shape the goods and services produced on Filecoin. This includes accelerating the proliferation of products and compliant use cases on Filecoin with both geographic and use case diversity. 
-
-## Overview
-Filecoin Plus is a pragmatic solution to the technically challenging problem of verifying that a particular set of data is useful in a permissionless, incentive-compatible, and pseudonymous network. By adding a layer of social trust and providing leverage to storage clients, Filecoin Plus makes the network more decentralized and accelerates the proliferation of high-quality services on the network. Offering additional reward incentives for storing a Filecoin Plus Client’s deals also ensures reward subsidies go where they are needed most – encouraging legitimate use of the network.
-
-### The Principles of Filecoin Plus are defined as:
-- Decentralization and Diversity
-- Transparency and Accountability
-- Community Governance
-- Low-Cost Dispute Resolution
-- Limited Trust Earned over Time
-- Terms of Service
-- A Useful Storage Network
+Filecoin Plus aims to maximize the amount of useful storage on Filecoin by adding a layer of social trust to the Network. [Clients](/client) can apply to [Notaries](/notary) to receive [DataCap](/datacap), which can be used to incentivize Miners to take storage deals. Miners who take deals that are compensated with DataCap receive a 10x to their quality adjusted power - increasing their probability of winning block rewards. Filecoin Plus puts power in the hands of Clients and incentivizes Miners to support real use case on the Network.
 
 ## Using DataCap
 ### How to Get DataCap
-Clients can get DataCap by making a request to a Notary - you can find a list of active Notaries on the [Filecoin Plus Registry](https://filecoinplus.on.fleek.co). Notaries may specialize in the types of requests they’ll choose to support - some may hand out small amounts of DataCap freely, while others may support larger requests (but also require more due diligence).
+Clients can get DataCap by making a request to a Notary - you can find a list of active Notaries on the [Filecoin Plus Registry](https://filecoinplus.on.fleek.co). Notaries may specialize in the types of requests they’ll choose to support - some may hand out small amounts of DataCap freely, while others may support larger requests (but may also require more due diligence).
 
-You can also find a list of notaries on-chain by using the the following command, which will return a list of addresses and their corresponding DataCap that can be allocated: 
+At a minimum, every Notary will require an on-chain Filecoin address to which they can send the requested DataCap. A Client can initialize their address on-chain by sending a minimal amount of Filecoin to it, e.g. as a result of purchasing some FIL from an exchange. As a Client makes deals using DataCap, the balance of DataCap on that address will be depleted. Filecoin addresses can only receive a single DataCap allocation. 
 
-```
-lotus-shed verifreg list-verifiers
-``` 
-
-At a minimum, every Notary will require an on-chain Filecoin address where they can send the DataCap you request. A client can initialize their address by sending a minimal amount of filecoin to it, e.g. as a result of purchasing some FIL from an exchange.
-
-_Note: As of now, DataCap allocations are a single use credit on a Filecoin address. If you receive an allocation and require more, you should make a new request with a new address that you have initialized like above._
+_Note: If you receive a DataCap allocation and require more, you should make a new request with a new address that you have initialized like above._
 
 ### How to Spend DataCap
-Once you have an address with DataCap, you can make deals using DataCap in lieu of Filecoin as payment. Because miners receive a deal quality multiplier for taking FIL+ deals, many miners offer special pricing and services to attract Clients who use DataCap to make deals.
+Once you have an address with DataCap, you can make deals using DataCap as a part of the payment. Because miners receive a deal quality multiplier for taking FIL+ deals, many miners offer special pricing and services to attract Clients who use DataCap to make deals.
 
 By default, when you make a deal with an address that has DataCap allocated, you will spend DataCap when making the deal. 
 
 If making deals through the [API](https://github.com/filecoin-project/lotus/blob/master/documentation/en/api-methods.md#ClientStartDeal), make sure when calling `ClientStartDeal` that the `VerifiedDeal` parameter is set to `true`. 
-
-```
-[
-  {
-    "Data": {
-      "TransferType": "string value",
-      "Root": {
-        "/": "bafy2bzacea3wsdh6y3a36tb3skempjoxqpuyompjbmfeyf34fi3uy6uue42v4"
-      },
-      "PieceCid": null,
-      "PieceSize": 1024
-    },
-    "Wallet": "f01234",
-    "Miner": "f01234",
-    "EpochPrice": "0",
-    "MinBlocksDuration": 42,
-    "ProviderCollateral": "0",
-    "DealStartEpoch": 10101,
-    "FastRetrieval": true,
-    "VerifiedDeal": true
-  }
-]
-```
 
 If making deals from the command line, make sure to pass the flag `--verified-deal=true` as a parameter.
 
@@ -67,7 +25,7 @@ If making deals from the command line, make sure to pass the flag `--verified-de
 ### Checking Remaining DataCap 
 Once you have received DataCap to an address, you can check the remaining balance either by visiting a site that enables this (e.g. [verify.glif.io](https://verify.glif.io/)) or by querying your address on a node. 
 
-_Note: Lotus-shed is a separate package you will need to install, though these features are slated to be merged into Lotus._
+_Note: [Lotus-shed]() is a separate package you will need to install, though these features are slated to be merged into Lotus._
 
 ```
 lotus-shed verifreg check-client  f00000
@@ -84,19 +42,19 @@ As a client who has received DataCap for making storage deals on Filecoin, this 
 
 - Store multiple copies of data across different data centers, and perhaps even regions, to ensure your data is reliably stored
 - Distribute your storage deals across different miners so your data is more likely to be accessible long term
-- Ask for features (like fast retrieval) that would make your experience better - clients a lot of leverage in this ecosystem
-- Stay in compliance with miners’ stated Terms of Service and Content Policy
+- Ask for features (like `fast retrieval`) that would make your experience better
+- Stay in compliance with Miners’ stated Terms of Service and Content Policy
 
 ## Terminology
 ### DataCap
-DataCap, when allocated to a client, can be spent by the client in storage deals with miners. These deals carry a higher deal quality multiplier, which increases the “quality adjusted power” of the storage miner on the network (yielding better block rewards for the miner over time). In short, miners are heavily incentivized to take deals from Clients who use DataCap to pay for their deals. 
+DataCap, when allocated to a Client, can be spent by the Client in storage deals with miners. These deals carry a higher deal quality multiplier, which increases the “quality adjusted power” of the storage miner on the network (yielding better block rewards for the miner over time). In short, miners are heavily incentivized to take deals from Clients who use DataCap to pay for their deals. 
 
 DataCap is granted in batches to Notaries, who in turn, allocate it to responsible clients that spend the DataCap to fund storage deals. DataCap is consumed as it is used to make deals. 
 
 ### Notary
 Notaries are selected to serve as fiduciaries for the Filecoin Network, and are responsible for allocating DataCap to clients with legitimate storage use cases. The base responsibilities of notaries include: 
 - Allocate DataCap to clients in order to subsidize reliable and useful storage on the network.
-- Verify that clients receive a DataCap commensurate with the level of trust that is warranted based on information provided.
+- Verify that Clients receive a DataCap commensurate with the level of trust that is warranted based on information provided.
 - Ensure that in the allocation of the DataCap no party is given excessive trust in any form that might jeopardize the network.
 - Follow operational guidelines, keep record of decision flow, and respond to any requests for audits of their allocation decisions.
 
@@ -122,5 +80,3 @@ https://github.com/filecoin-project/FIPs/blob/master/FIPS/fip-0003.md
 
 Notary Governance Repo (includes links to bi-weekly Governance Calls):
 https://github.com/filecoin-project/notary-governance
-
-Filecoin Plus interaction model: 
