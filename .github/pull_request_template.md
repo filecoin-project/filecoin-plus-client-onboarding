@@ -8,16 +8,6 @@ Related to Issue #
 
 ## Types of changes
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to change)
+- [ ] Fixing existing documentation / content in repo
+- [ ] Adding new content to the repo (including adding to the miners.md file)
  
-## Checklist:
-
-- [ ] Follows the code style of this project.
-- [ ] Tests Cover Changes
-- [ ] Documentation
-
-#### Funny gif
-
-![Put a link of a funny gif inside the parenthesis-->]()
