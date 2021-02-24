@@ -9,5 +9,6 @@ Related to Issue #
 ## Types of changes
 
 - [ ] Fixing existing documentation / content in repo
-- [ ] Adding new content to the repo (including adding to the miners.md file)
+- [ ] Adding new content to the repo 
+- [ ] Adding yourself to the miner registry (miners.md)
  
