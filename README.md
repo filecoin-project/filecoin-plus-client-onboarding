@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="docs/_media/Filecoin-plus-logo-color-dark.png" alt="Filecoin Plus Logo" />
+  <img src="docs/_media/Filecoin-plus-logo-color-dark.png" alt="Filecoin Plus Logo" width="244" />
 </p>
 
 ## Introduction
