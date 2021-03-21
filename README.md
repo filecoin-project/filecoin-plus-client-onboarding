@@ -1,3 +1,7 @@
+<p align="left">
+  <img src="docs/_media/Filecoin-plus-logo-color-dark.png" alt="Filecoin Plus Logo" width="320" />
+</p>
+
 ## Introduction
 Filecoin Plus aims to maximize the amount of useful storage on Filecoin by adding a layer of social trust to the Network. [Clients](#client) can apply to [Notaries](#notary) to receive [DataCap](#datacap), which can be used to incentivize Miners to take storage deals. Miners who take deals that are compensated with DataCap receive a 10x to their quality adjusted power - increasing their probability of winning block rewards. Filecoin Plus puts power in the hands of Clients and incentivizes Miners to support real use case on the Network.
 
