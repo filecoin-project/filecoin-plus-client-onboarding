@@ -62,7 +62,7 @@ Notaries are selected to serve as fiduciaries for the Filecoin Network, and are 
 - Ensure that in the allocation of the DataCap no party is given excessive trust in any form that might jeopardize the network.
 - Follow operational guidelines, keep record of decision flow, and respond to any requests for audits of their allocation decisions.
 
-You can find a list of the active Notaries [here](https://filecoinplus.on.fleek.co) who can allocate DataCap. 
+You can find a list of the active Notaries [here](https://plus.fil.org) who can allocate DataCap. 
 
 Notaries are selected through an application process described [here](https://github.com/filecoin-project/notary-governance/tree/main/notaries#application--selection-process). If approved, [Root Key Holders](https://github.com/filecoin-project/notary-governance/tree/main/root-key-holders#overview) (executors of the decisions made by the community on-chain) grant Notary status and associated DataCap amounts. Those interested in becoming Notaries should apply to this role by filing an Issue in the [Notary Governance Repo](https://github.com/filecoin-project/notary-governance/).
 
