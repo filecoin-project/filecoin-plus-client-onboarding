@@ -29,10 +29,17 @@ If making deals from the command line, make sure to pass the flag `--verified-de
 ### Checking Remaining DataCap 
 Once you have received DataCap to an address, you can check the remaining balance either by visiting a site that enables this (e.g. [verify.glif.io](https://verify.glif.io/)) or by querying your address on a node. 
 
+#### With lotus v1.10.0 ^
+
+```
+lotus filplus check-client-datacap f00000
+```
+
+#### With lotus v1.9.0 and below
 _Note: [Lotus-shed](https://github.com/filecoin-project/lotus/tree/master/cmd/lotus-shed) is a separate package you will need to build and install (`make lotus-shed` in the [Lotus](https://github.com/filecoin-project/lotus) source), although these features are slated to be merged into Lotus._
 
 ```
-lotus-shed verifreg check-client  f00000
+lotus-shed verifreg check-client f00000
 ```
 
 ### Finding Miners to Take FIL+ Deals
