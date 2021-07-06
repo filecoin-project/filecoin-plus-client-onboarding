@@ -7,7 +7,7 @@ Filecoin Plus aims to maximize the amount of useful storage on Filecoin by addin
 
 ## Using DataCap
 ### How to Get DataCap
-Clients can get DataCap by making a request to a Notary - you can find a list of active Notaries on the [Filecoin Plus Registry](https://filecoinplus.on.fleek.co). Notaries may specialize in the types of requests they’ll choose to support - some may hand out small amounts of DataCap freely, while others may support larger requests (but may also require more due diligence).
+Clients can get DataCap by making a request to a Notary - you can find a list of active Notaries on the [Filecoin Plus Registry](https://plus.fil.org/verifiers). Notaries may specialize in the types of requests they’ll choose to support - some may hand out small amounts of DataCap freely, while others may support larger requests (but may also require more due diligence).
 
 At a minimum, every Notary will require an on-chain Filecoin address to which they can send the requested DataCap. A Client can initialize their address on-chain by sending a minimal amount of Filecoin to it, e.g. as a result of purchasing some FIL from an exchange. As a Client makes deals using DataCap, the balance of DataCap on that address will be depleted. Filecoin addresses can only receive a single DataCap allocation. 
 
