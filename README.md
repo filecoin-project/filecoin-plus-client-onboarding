@@ -7,11 +7,9 @@ Filecoin Plus aims to maximize the amount of useful storage on Filecoin by addin
 
 ## Using DataCap
 ### How to Get DataCap
-Clients can get DataCap by making a request to a Notary - you can find a list of active Notaries on the [Filecoin Plus Registry](https://plus.fil.org/verifiers). Notaries may specialize in the types of requests they’ll choose to support - some may hand out small amounts of DataCap freely, while others may support larger requests (but may also require more due diligence).
+Clients can get DataCap by making a request to a Notary - you can find a list of active Notaries on the [Filecoin Plus Registry](https://plus.fil.org/verifiers). Notaries may specialize in the types of requests they’ll choose to support - some may hand out small amounts of DataCap freely, while others may support larger requests (but may also require more due diligence). _**If you're looking to store large data (over 500TiB) - check out the [Large Dataset Notary program](https://github.com/filecoin-project/filecoin-plus-large-datasets), which can grant between 500TiB-5PiB of DataCap.**_
 
-At a minimum, every Notary will require an on-chain Filecoin address to which they can send the requested DataCap. A Client can initialize their address on-chain by sending a minimal amount of Filecoin to it, e.g. as a result of purchasing some FIL from an exchange. As a Client makes deals using DataCap, the balance of DataCap on that address will be depleted. Filecoin addresses can only receive a single DataCap allocation. 
-
-_Note: If you receive a DataCap allocation and require more, you should make a new request with a new address that you have initialized like above._
+At a minimum, every Notary will require an [on-chain Filecoin address](https://docs.filecoin.io/get-started/lotus/send-and-receive-fil/) to which they can send the requested DataCap. A Client can initialize their address on-chain by sending a minimal amount of Filecoin to it, e.g. as a result of purchasing some FIL from an exchange. As a Client makes deals using DataCap, the balance of DataCap on that address will be depleted. If you run out or need more DataCap allocation, please make a new request using your same address (now that [FIP-0012 is live](https://fips.fission.app/fips/fip-0012/)). 
 
 ### How to Spend DataCap
 Once you have an address with DataCap, you can make deals using DataCap as a part of the payment. Because miners receive a deal quality multiplier for taking FIL+ deals, many miners offer special pricing and services to attract Clients who use DataCap to make deals.
