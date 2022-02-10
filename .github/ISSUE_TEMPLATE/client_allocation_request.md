@@ -17,5 +17,4 @@ assignees: ''
 - Addresses to be Notarized: [fxxxx OR TBD]
 - Notary Requested: [choose one notary]
 
-
 -----------------------------
