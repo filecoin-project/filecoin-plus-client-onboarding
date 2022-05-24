@@ -3,7 +3,7 @@
 </p>
 
 ## Introduction
-Filecoin Plus aims to maximize the amount of useful storage on Filecoin by adding a layer of social trust to the Network. [Clients](#client) can apply to [Notaries](#notary) to receive [DataCap](#datacap), which can be used to incentivize Miners to take storage deals. Miners who take deals that are compensated with DataCap receive a 10x to their quality adjusted power - increasing their probability of winning block rewards. Filecoin Plus puts power in the hands of Clients and incentivizes Miners to support real use case on the Network.
+Filecoin Plus aims to maximize the amount of useful storage on Filecoin by adding a layer of social trust to the Network. [Clients](#client) can apply to [Notaries](#notary) to receive [DataCap](#datacap), which can be used to incentivize Storage Providers (SPs) to take storage deals. SPs who take deals that are compensated with DataCap receive a 10x to their quality adjusted power - increasing their probability of winning block rewards. Filecoin Plus puts power in the hands of Clients and incentivizes SPs to support real use case on the Network.
 
 ## Using DataCap
 ### How to Get DataCap
@@ -12,7 +12,7 @@ Clients can get DataCap by making a request to a Notary - you can find a list of
 At a minimum, every Notary will require an [on-chain Filecoin address](https://docs.filecoin.io/get-started/lotus/send-and-receive-fil/) to which they can send the requested DataCap. A Client can initialize their address on-chain by sending a minimal amount of Filecoin to it, e.g. as a result of purchasing some FIL from an exchange. As a Client makes deals using DataCap, the balance of DataCap on that address will be depleted. If you run out or need more DataCap allocation, please make a new request using your same address (now that [FIP-0012 is live](https://fips.fission.app/fips/fip-0012/)). 
 
 ### How to Spend DataCap
-Once you have an address with DataCap, you can make deals using DataCap as a part of the payment. Because miners receive a deal quality multiplier for taking FIL+ deals, many miners offer special pricing and services to attract Clients who use DataCap to make deals.
+Once you have an address with DataCap, you can make deals using DataCap as a part of the payment. Because SPs receive a deal quality multiplier for taking Fil+ deals, many SPs offer special pricing and services to attract Clients who use DataCap to make deals.
 
 By default, when you make a deal with an address that has DataCap allocated, you will spend DataCap when making the deal. 
 
@@ -40,11 +40,13 @@ _Note: [Lotus-shed](https://github.com/filecoin-project/lotus/tree/master/cmd/lo
 lotus-shed verifreg check-client f00000
 ```
 
-### Finding Miners to Take FIL+ Deals
-There are a few difference ways in which a client can find a miner to take a FIL+ storage deal:
-- This [issue](https://github.com/filecoin-project/notary-governance/issues/8) has a list of miners involved in the discussion below that advertise details about their services
+### Finding Storage Providers to Take Fil+ Deals
+The general recommendation for clients on the network is to build several replicas of their data on the network, ideally with different SPs / SP entities to spread risk. From a DataCap distribution perspective, guidance is that clients should engage at least 4 SPs and no single SP ID should receive >30% of a client's allocated DataCap. This aligns SP growth incentives with client needs for reliably storing data on the network longer term.
+
+There are a few difference ways in which a client can find a SP to take a Fil+ storage deal:
+- This [issue](https://github.com/filecoin-project/notary-governance/issues/8) has a list of SPs involved in the discussion below that advertise details about their services
 - Join the [#fil-plus](https://filecoinproject.slack.com/archives/C01DLAPKDGX) channel on Filecoin Slack to discuss storage options
-- Hop into the network with your node and query miners (using `query-ask`) to check their verified deal prices
+- Hop into the network with your node and query SPs (using `query-ask`) to check their verified deal prices
 
 ### Best Practices
 As a client who has received DataCap for making storage deals on Filecoin, this [issue](https://github.com/filecoin-project/notary-governance/issues/9) is a great starting point. A few of the key thoughts shared in the issue include: 
