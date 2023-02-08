@@ -1,6 +1,6 @@
 ---
 name: Client Datacap Allocation Request
-about: Use the [Fil+ App](https://plus.fil.org/verifiers) in order to request DataCap! If the [Fil+ app](https://plus.fil.org/verifiers) is not available, then open a new issue in this repo to request datacap.
+about: Ppen a new issue in this repo to request small amounts of DataCap directly from a specific notary.
 title: 'Client Allocation Request for: [Personal or Organization Name]'
 labels: 'state:Request'
 assignees: ''
