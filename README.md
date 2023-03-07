@@ -79,11 +79,17 @@ Additionally, to prevent conflicts of interest, Notaries should not allocate Dat
 
 _See additional information [here](https://github.com/filecoin-project/notary-governance/tree/main/notaries#overview)._
 
-### Client
+### Storage Client
 Clients are active participants of the network with DataCap allocation for their use cases. Clients can use their DataCap to incentivize miners to provide additional features and levels of services that meet their specific requirements. In doing so, storage related goods and services on Filecoin are made more valuable and competitive over time. Clients are vetted by Notaries to ensure the client receives DataCap commensurate with their reputation and needs, and that the Client responsibly allocates that DataCap. Obtain verification and DataCap allocation from a Notary. Deploy DataCap responsibly in accordance with the Principles. Follow operational guidelines, keep record of decision flow, and respond to any requests for audits of their allocation decisions.
 
 Specific details on the suggested framework for responsible DataCap allocation are described in the [repository](https://github.com/filecoin-project/notary-governance). It is expected that clients who intend to receive greater amounts of DataCap may be asked to provide evidence for responsible spending of their previous allocation before receiving more.
 
+### FVM Smart Contracts
+Smart contracts can acquire DataCap just like any regular client. To do so, simply enter the f410 address of the smart contract that requires DataCap as the client address when making a request.
+
+The process outlined above is for larger amounts of Datacap > 500TiBs. For a smart contract's first DataCap allocation, we recommend using auto-verifier [Verify.glif.io](Verify.glif.io) to get 32 GiB of DataCap, as specified [here](https://docs.filecoin.io/store/filecoin-plus/overview/).
+
+It's important to note that DataCap allocations are a one-time credit for a Filecoin address and cannot be transferred between smart contracts. If you need to redeploy the smart contract, you must request additional DataCap. To improve this experience, we are developing an FRC to allow DataCap to be held between redeployments. 
 
 ## Resources
 FIP introducing Filecoin Plus:
