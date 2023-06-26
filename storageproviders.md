@@ -1,6 +1,6 @@
-## List of Miners taking Fil+ Deals
+## List of SPs taking Fil+ Deals
 
-| Miner | Location | Miner ID | Contact Information | Special Offering | Features | Terms of Service | Content Policy |
+| Storage Provider | Location | SP ID | Contact Information | Special Offering | Features | Terms of Service | Content Policy |
 |-|-|-|-|-|-|-|-|
 | rjan90 | Norway, Oslo | f023467 | Slack: Phi-rjan <br>Website: https://phimining.io/ <br>Email: contact@phimining.io | 0 FIL for verified data |Servers housed in a tier 3 datacenter in Oslo, Norway. Sub millisecond latency to the most densely populated areas of Norway. | [Terms of Service](https://phimining.io/terms-of-service.html) | _Link coming_ |
 | s0nik42 | France, Europe | f010479 | Slack: @s0nik42 <br>Email : online@noelnoel.org | 0 FIL for early FIL+ Clients | Trustworthy <br>- Active community members (10k+ messages) <br>- Developing in Filecoin Ecosystems <br>- 15 years experience in Datacenters, Telecom & Security <br>- Fast retrieval<br>- 2TiB daily sealing power<br>- 2GB connectivity throughput| [Terms of Service](https://github.com/Murmuration-Labs/filecoin-node-operator-kit/blob/main/sample-terms-of-service-template.md) | [Content Policy](https://github.com/Murmuration-Labs/filecoin-node-operator-kit/blob/main/Content-Policy-Guide.md) |
