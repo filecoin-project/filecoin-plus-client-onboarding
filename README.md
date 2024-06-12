@@ -2,6 +2,23 @@
   <img src="docs/_media/Filecoin-plus-logo-color-dark.png" alt="Filecoin Plus Logo" width="320" />
 </p>
 
+This Repo is no longer maintained
+This repository for the Fil+ Notaries has been sunset. The updated repositority for ALLOCATORS has been created and is now maintained at Github Goverance Repo
+
+To view other updated reference links for the Fil+ program, please see
+
+For information on the open and pending DataCap deals, please see FIDL's Allocator.tech
+For information on support issues or a listing of all current Allocators, please see Allocator Registry
+For getting in touch, please reach out in SLACK
+Bi-weekly recorded Fil+ governance meetings on Youtube
+
+
+
+
+
+
+
+
 ## Introduction
 Filecoin Plus aims to maximize the amount of useful storage on Filecoin by adding a layer of social trust to the Network. [Clients](#client) can apply to [Notaries](#notary) to receive [DataCap](#datacap), which can be used to incentivize Storage Providers (SPs) to take storage deals. SPs who take deals that are compensated with DataCap receive a 10x to their quality adjusted power - increasing their probability of winning block rewards. Filecoin Plus puts power in the hands of Clients and incentivizes SPs to support real use case on the Network.
 
